@@ -1,0 +1,129 @@
+{
+  "summary": [
+    {
+      "label": "Prediction rows",
+      "value": 3
+    },
+    {
+      "label": "Feature values",
+      "value": 5
+    },
+    {
+      "label": "Unavailable events excluded",
+      "value": 1
+    }
+  ],
+  "note": "Eligibility uses both event time and availability time. Counts are per prediction query.",
+  "columns": [
+    "entity",
+    "prediction_time",
+    "feature",
+    "value",
+    "event_time",
+    "available_time",
+    "age_seconds"
+  ],
+  "rows": [
+    {
+      "entity": "customer-01",
+      "prediction_time": "2026-01-01T10:00:00Z",
+      "feature": "orders_30d",
+      "value": 4,
+      "event_time": "2026-01-01T09:00:00Z",
+      "available_time": "2026-01-01T09:01:00Z",
+      "age_seconds": 3600
+    },
+    {
+      "entity": "customer-01",
+      "prediction_time": "2026-01-01T10:00:00Z",
+      "feature": "segment",
+      "value": "returning",
+      "event_time": "2026-01-01T09:00:00Z",
+      "available_time": "2026-01-01T09:01:00Z",
+      "age_seconds": 3600
+    },
+    {
+      "entity": "customer-01",
+      "prediction_time": "2026-01-01T12:00:00Z",
+      "feature": "orders_30d",
+      "value": 9,
+      "event_time": "2026-01-01T09:30:00Z",
+      "available_time": "2026-01-01T11:00:00Z",
+      "age_seconds": 9000
+    },
+    {
+      "entity": "customer-01",
+      "prediction_time": "2026-01-01T12:00:00Z",
+      "feature": "segment",
+      "value": "returning",
+      "event_time": "2026-01-01T09:00:00Z",
+      "available_time": "2026-01-01T09:01:00Z",
+      "age_seconds": 10800
+    },
+    {
+      "entity": "customer-02",
+      "prediction_time": "2026-01-01T10:00:00Z",
+      "feature": "orders_30d",
+      "value": 1,
+      "event_time": "2026-01-01T09:00:00Z",
+      "available_time": "2026-01-01T09:02:00Z",
+      "age_seconds": 3600
+    }
+  ],
+  "joins": [
+    {
+      "entity": "customer-01",
+      "at": "2026-01-01T10:00:00Z",
+      "features": {
+        "orders_30d": {
+          "value": 4,
+          "event_at": "2026-01-01T09:00:00Z",
+          "available_at": "2026-01-01T09:01:00Z",
+          "age_seconds": 3600
+        },
+        "segment": {
+          "value": "returning",
+          "event_at": "2026-01-01T09:00:00Z",
+          "available_at": "2026-01-01T09:01:00Z",
+          "age_seconds": 3600
+        }
+      },
+      "unavailable": 1,
+      "expired": 0
+    },
+    {
+      "entity": "customer-01",
+      "at": "2026-01-01T12:00:00Z",
+      "features": {
+        "orders_30d": {
+          "value": 9,
+          "event_at": "2026-01-01T09:30:00Z",
+          "available_at": "2026-01-01T11:00:00Z",
+          "age_seconds": 9000
+        },
+        "segment": {
+          "value": "returning",
+          "event_at": "2026-01-01T09:00:00Z",
+          "available_at": "2026-01-01T09:01:00Z",
+          "age_seconds": 10800
+        }
+      },
+      "unavailable": 0,
+      "expired": 0
+    },
+    {
+      "entity": "customer-02",
+      "at": "2026-01-01T10:00:00Z",
+      "features": {
+        "orders_30d": {
+          "value": 1,
+          "event_at": "2026-01-01T09:00:00Z",
+          "available_at": "2026-01-01T09:02:00Z",
+          "age_seconds": 3600
+        }
+      },
+      "unavailable": 0,
+      "expired": 0
+    }
+  ]
+}
