@@ -1,5 +1,7 @@
 # ChronoJoin
 
+**Created and maintained by [Hamed Minaei](https://github.com/hamed665).**
+
 **Reconstruct what your model could actually know at prediction time.**
 
 A dependency-free JavaScript engineering workbench by Hamed Minaei.
